@@ -1,0 +1,314 @@
+{
+  "home_assistant": {
+    "installation_type": "Home Assistant OS",
+    "version": "2024.3.1",
+    "dev": false,
+    "hassio": true,
+    "virtualenv": false,
+    "python_version": "3.12.2",
+    "docker": true,
+    "arch": "aarch64",
+    "timezone": "Europe/London",
+    "os_name": "Linux",
+    "os_version": "5.15.84-v8",
+    "supervisor": "2024.03.0",
+    "host_os": "Home Assistant OS 9.5",
+    "docker_version": "20.10.22",
+    "chassis": "embedded",
+    "run_as_root": true
+  },
+  "custom_components": {
+    "fullykiosk": {
+      "version": "1.1.0",
+      "requirements": [
+        "python-fullykiosk==0.0.11"
+      ]
+    },
+    "pirateweather": {
+      "version": "1.4.5",
+      "requirements": [
+        "python-forecastio==1.4.0"
+      ]
+    },
+    "places": {
+      "version": "v2.6.0",
+      "requirements": []
+    },
+    "weatherbit": {
+      "version": "1.0.21",
+      "requirements": [
+        "pyweatherbitdata==1.0.15"
+      ]
+    },
+    "chime_tts": {
+      "version": "v0.13.0",
+      "requirements": [
+        "pydub"
+      ]
+    },
+    "browser_mod": {
+      "version": "1.5.3",
+      "requirements": []
+    },
+    "nationalrailuk": {
+      "version": "0.0.1",
+      "requirements": [
+        "zeep[async]==4.2.1"
+      ]
+    },
+    "humanity": {
+      "version": "0.14.1",
+      "requirements": []
+    },
+    "hacs": {
+      "version": "1.34.0",
+      "requirements": [
+        "aiogithubapi>=22.10.1"
+      ]
+    },
+    "var": {
+      "version": "0.15.0",
+      "requirements": []
+    },
+    "alarmo": {
+      "version": "v1.9.15",
+      "requirements": []
+    },
+    "scheduler": {
+      "version": "v0.0.0",
+      "requirements": []
+    },
+    "icloud3": {
+      "version": "3.0",
+      "requirements": []
+    },
+    "anniversaries": {
+      "version": "5.2.0",
+      "requirements": [
+        "python-dateutil>=2.8.1",
+        "integrationhelper>=0.2.2",
+        "voluptuous>=0.12.1"
+      ]
+    }
+  },
+  "integration_manifest": {
+    "domain": "esphome",
+    "name": "ESPHome",
+    "after_dependencies": [
+      "zeroconf",
+      "tag"
+    ],
+    "codeowners": [
+      "@OttoWinter",
+      "@jesserockz",
+      "@kbx81",
+      "@bdraco"
+    ],
+    "config_flow": true,
+    "dependencies": [
+      "assist_pipeline",
+      "bluetooth"
+    ],
+    "dhcp": [
+      {
+        "registered_devices": true
+      }
+    ],
+    "documentation": "https://www.home-assistant.io/integrations/esphome",
+    "import_executor": true,
+    "integration_type": "device",
+    "iot_class": "local_push",
+    "loggers": [
+      "aioesphomeapi",
+      "noiseprotocol",
+      "bleak_esphome"
+    ],
+    "requirements": [
+      "aioesphomeapi==23.0.0",
+      "esphome-dashboard-api==1.2.3",
+      "bleak-esphome==1.0.0"
+    ],
+    "zeroconf": [
+      "_esphomelib._tcp.local."
+    ],
+    "is_built_in": true
+  },
+  "data": {
+    "config": {
+      "entry_id": "6e61a2e0a374440a5cdf13a8020326c3",
+      "version": 1,
+      "minor_version": 1,
+      "domain": "esphome",
+      "title": "esp32-poe",
+      "data": {
+        "host": "192.168.0.220",
+        "port": 6053,
+        "password": "",
+        "noise_psk": "",
+        "device_name": "esp32-poe"
+      },
+      "options": {
+        "allow_service_calls": false
+      },
+      "pref_disable_new_entities": false,
+      "pref_disable_polling": false,
+      "source": "zeroconf",
+      "unique_id": "4c:11:ae:d6:d3:dc",
+      "disabled_by": null
+    },
+    "storage_data": {
+      "device_info": {
+        "uses_password": false,
+        "name": "esp32-poe",
+        "friendly_name": "",
+        "mac_address": "**REDACTED**",
+        "compilation_time": "Mar 16 2024, 12:13:52",
+        "model": "esp32-poe",
+        "manufacturer": "Espressif",
+        "has_deep_sleep": false,
+        "esphome_version": "2022.12.8",
+        "project_name": "",
+        "project_version": "",
+        "webserver_port": 0,
+        "voice_assistant_version": 0,
+        "legacy_bluetooth_proxy_version": 0,
+        "bluetooth_proxy_feature_flags": 0,
+        "suggested_area": ""
+      },
+      "services": [
+        {
+          "name": "dfplayer_next",
+          "key": 1532363536,
+          "args": []
+        },
+        {
+          "name": "dfplayer_previous",
+          "key": 3708407408,
+          "args": []
+        },
+        {
+          "name": "dfplayer_play",
+          "key": 1808238473,
+          "args": [
+            {
+              "name": "file",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_play_loop",
+          "key": 1595477142,
+          "args": [
+            {
+              "name": "file",
+              "type": 1
+            },
+            {
+              "name": "loop_",
+              "type": 0
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_play_folder",
+          "key": 1973895704,
+          "args": [
+            {
+              "name": "folder",
+              "type": 1
+            },
+            {
+              "name": "file",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_play_loop_folder",
+          "key": 1624096481,
+          "args": [
+            {
+              "name": "folder",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_set_device_tf",
+          "key": 1906442459,
+          "args": []
+        },
+        {
+          "name": "dfplayer_set_device_usb",
+          "key": 2818898297,
+          "args": []
+        },
+        {
+          "name": "dfplayer_set_volume",
+          "key": 4137221946,
+          "args": [
+            {
+              "name": "volume",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_set_eq",
+          "key": 930082874,
+          "args": [
+            {
+              "name": "preset",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "name": "dfplayer_sleep",
+          "key": 1941915312,
+          "args": []
+        },
+        {
+          "name": "dfplayer_reset",
+          "key": 2804590344,
+          "args": []
+        },
+        {
+          "name": "dfplayer_start",
+          "key": 430145901,
+          "args": []
+        },
+        {
+          "name": "dfplayer_pause",
+          "key": 350330823,
+          "args": []
+        },
+        {
+          "name": "dfplayer_stop",
+          "key": 3330655407,
+          "args": []
+        },
+        {
+          "name": "dfplayer_random",
+          "key": 1830515774,
+          "args": []
+        },
+        {
+          "name": "dfplayer_volume_up",
+          "key": 2981705335,
+          "args": []
+        },
+        {
+          "name": "dfplayer_volume_down",
+          "key": 3493118940,
+          "args": []
+        }
+      ],
+      "api_version": {
+        "major": 1,
+        "minor": 7
+      }
+    }
+  }
+}

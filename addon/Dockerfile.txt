@@ -1,0 +1,23 @@
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+# Install Node.js, npm, and other dependencies
+RUN apk add --no-cache nodejs npm postfix
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy the rest of the application
+COPY . .
+
+# Build the TypeScript project
+RUN npm run build
+
+# Run the application
+CMD [ "node", "dist/index.js" ]
